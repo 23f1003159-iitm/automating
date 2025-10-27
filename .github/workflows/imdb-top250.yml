@@ -2,7 +2,7 @@ name: Scrape IMDb Top 250
 
 on:
   schedule:
-    - cron: "30 3 * * *"   # Runs daily at 03:30 UTC; pick any hour/min
+    - cron: "18 0 * * *"   # Change 18 to the exact minute you want (e.g., 00:18 UTC = 05:48 IST)
   workflow_dispatch:
 
 jobs:
@@ -29,3 +29,4 @@ jobs:
           git add *.json
           git commit -m "Update IMDb Top 250 data [skip ci]" || exit 0
           git push
+
